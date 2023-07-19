@@ -18,6 +18,10 @@ if __name__=='__main__':
     print('\n**** Get Current Weather Condition ****\n')
 
     city_name = input('Enter your city name\n')
+
+    if not bool(city_name.strip()):
+        city_name = 'Dhanbad'
+
     weather_data = get_current_weather(city_name)
     print('\n')
     pprint(weather_data)
